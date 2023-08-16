@@ -1,0 +1,144 @@
+#tour-main-pan{
+    /* background-color: #fff; */
+}
+
+#tour-main-div-2{
+    background-color: #fff;
+    padding: 1rem;
+}
+#tour-main-div-1{
+    background-color: #fff;
+    padding: 1rem;
+}
+.tour-div-1-filter-1{
+    margin-bottom: 2rem;
+    padding:0 1rem;
+}
+.green-bullet {
+    color: green;
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+
+  .red-bullet {
+    color: red;
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+
+
+/* TourPage.css */
+
+/* Custom styling for the accordion */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    position: relative;
+  }
+  
+  .accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    transition: transform 0.3s;
+  }
+  
+  .accordionactive, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  .accordionactive:after {
+    content: "\2212";
+    transform: translateY(-50%) rotate(180deg);
+  }
+  
+  .tourpanel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  
+  .show {
+    min-height: 100px; /* Adjust this value as needed */
+  }
+  
+  /* ... (other styles) */
+  
+/*   
+  input,
+textarea {
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  margin: 0;
+  outline: none;
+  padding: 10px;
+} */
+
+input[type="button"] {
+  cursor: pointer;
+}
+
+.input-group {
+  clear: both;
+  margin: 15px 0;
+  position: relative;
+}
+.input-group input{
+    outline: none;
+    border: 1px solid #eeeeee;
+  }
+
+.input-group input[type='button'] {
+  background-color: #eeeeee;
+  min-width: 38px;
+  width: auto;
+  transition: all 300ms ease;
+
+
+}
+
+.input-group .button-minus,
+.input-group .button-plus {
+  font-weight: bold;
+  height: 38px;
+  padding: 0;
+  width: 38px;
+  position: relative;
+}
+
+.input-group .quantity-field {
+  position: relative;
+  height: 38px;
+  left: -6px;
+  text-align: center;
+  width: 62px;
+  display: inline-block;
+  font-size: 13px;
+  margin: 0 0 5px;
+  resize: vertical;
+}
+
+.button-plus {
+  left: -13px;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+}

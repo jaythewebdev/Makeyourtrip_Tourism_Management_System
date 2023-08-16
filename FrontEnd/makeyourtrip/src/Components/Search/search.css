@@ -1,0 +1,125 @@
+/* SearchContainer.css */
+
+/* Common styles for search-ip-1 container and its child elements */
+.search-ip-1 {
+    /* border: 3px solid #fe5c24; */
+    display: flex;
+    align-items: center;
+    z-index: 3;
+  }
+
+  .ip-1{
+    border-top:5px solid #2493e0 ;
+    border-bottom:5px solid #2493e0 ;
+    border-left: 5px solid #2493e0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #ffff;
+  }
+  .ip-1 input::placeholder{
+    color:var(--clr-grey-5);
+  }
+
+  .ip-2{
+    border-top:5px solid #2493e0 ;
+    border-bottom:5px solid #2493e0 ;
+    border-right: 5px solid #2493e0;
+    border-left: 1px solid var(--clr-grey-5);
+
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-color: #ffff;
+  }
+
+  /* .ant-picker-input>input::placeholder {
+    color: red;
+ } */
+ /* #DateInput_input::placeholder::before{
+    content:"Start Date";
+    color: red;
+  }
+  
+  #DateInput_input::placeholder::after{
+    content: 'End Date';
+    color: blue; /* Replace 'blue' with your desired color value for the second placeholder */
+  /* } */ 
+  
+  .ip-1{
+    width: 55%;
+  }
+  .ip-2{
+    width: 45%;
+  }
+
+  .search-ip-2{
+    border:5px solid #2493e0  ;
+    border-radius: 13px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 00px;
+    z-index: 3;
+  }
+
+  .search-ip-1 input {
+    /* Add any common styles for the input element */
+    flex: 1;
+  }
+
+  /* Set initial width of the child elements to 50% each */
+.search-ip-1 input,
+.search-ip-1 .ant-picker-range {
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+  
+  .search-ip-1 .ant-picker-range {
+    /* Add any common styles for the RangePicker element */
+    flex: 1;
+  }
+
+  .search-fields{
+    margin-bottom:1rem;
+}
+  
+  /* Responsive layout adjustments using media queries */
+  @media screen and (max-width: 868px) {
+    /* Set the flex-direction to column for small screens */
+    .search-ip-1 {
+      flex-direction: column;
+      width: 100%;
+    }
+    .ip-1,.ip-2{
+        width: 90%;
+        border:3px solid #fe5c24;
+        border-radius: 10px;
+        margin-top: 0.5rem;
+      }
+      .search-ip-2{
+        border-radius: 10px;
+        margin-top: 0.5rem;
+      }
+    .search-ip-1 input,
+    .search-ip-1 .ant-picker-range {
+      /* Reset the flex property for input and RangePicker to allow them to stack vertically */
+      flex: unset;
+      width: 100%;
+    }
+
+  }
+
+  @media screen and (max-width: 830px) {
+    .search-fields{
+        margin-bottom: 1rem;
+    }
+      }
+  #DateInput_input{
+    background-color: #ffff;
+  }
+
+  .search-btn{
+    background-color: #2493e0;
+    font-size: 1rem;
+  }
+
+  .search-btn:hover{
+    background-color: #2493e1;
+    color: #fe5c24;
+  }

@@ -1,0 +1,156 @@
+.Org-Dash-fl-table {
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+    table-layout: fixed;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  
+  .Org-Dash-fl-table td,
+  .Org-Dash-fl-table th {
+    text-align: center;
+    padding: 8px;
+    /* max-width: 4rem; */
+  }
+  
+  .Org-Dash-fl-table td {
+    /* border-right: 1px solid #f8f8f8; */
+    font-size: 12px;
+  }
+  .Org-Dash-fl-table td.Address-Cell {
+    max-width: 4rem;
+    word-wrap: break-word;
+  }
+  
+  .Org-Dash-fl-table thead th {
+    /* color: #ffffff;
+    background:  #00549E; */
+    border-top: 2px solid #555;
+    border-bottom: 2px solid #555;
+  }
+  
+  /* .Org-Dash-fl-table thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #0DC7EB;
+  } */
+  
+  .Org-Dash-fl-table tr:nth-child(even) {
+    background: #F8F8F8;
+  }
+  
+  /* Responsive */
+  
+  @media (max-width: 767px) {
+    .Org-Dash-col {
+      visibility: hidden;
+    }
+    .Org-Dash-fl-table {
+      display: block;
+      max-width: 22rem;
+    }
+    .Org-Dash-patient-table:before {
+      content: "Scroll horizontally >";
+      display: block;
+      text-align: right;
+      font-size: 11px;
+      color: white;
+      padding: 0 0 10px;
+    }
+    .Org-Dash-fl-table thead,
+    .Org-Dash-fl-table tbody,
+    .Org-Dash-fl-table thead th {
+      display: block;
+    }
+    .Org-Dash-fl-table thead th:last-child {
+      border-bottom: none;
+    }
+    .Org-Dash-fl-table thead {
+      float: left;
+    }
+    .Org-Dash-fl-table tbody {
+      width: auto;
+      position: relative;
+      overflow-x: auto;
+    }
+    .Org-Dash-fl-table td,
+    .Org-Dash-fl-table th {
+      padding: 20px 0.625em 0.625em 0.625em;
+      height: 60px;
+      vertical-align: middle;
+      box-sizing: border-box;
+      overflow-x: hidden;
+      overflow-y: auto;
+      width: 110px;
+      font-size: 13px;
+      text-overflow: ellipsis;
+    }
+    .Org-Dash-fl-table thead th {
+      text-align: left;
+      border-bottom: 1px solid #f7f7f9;
+    }
+    .Org-Dash-fl-table tbody tr {
+      display: table-cell;
+    }
+    .Org-Dash-fl-table tbody tr:nth-child(odd) {
+      background: none;
+    }
+    .Org-Dash-fl-table tr:nth-child(even) {
+      background: transparent;
+    }
+    .Org-Dash-fl-table tr td:nth-child(odd) {
+      background: #F8F8F8;
+      /* border-right: 1px solid #E6E4E4; */
+    }
+    /* .Org-Dash-fl-table tr td:nth-child(even) {
+      /* border-right: 1px solid #E6E4E4; */
+    /* } */ 
+
+    .Org-Dash-fl-table tbody td {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .my-btn-green{
+    background-color: green;
+  }
+  .my-btn-green:hover{
+    background-color: rgb(0, 168, 0);
+  }
+
+  .my-btn-red{
+    background-color: red;
+  }
+  .my-btn-red:hover{
+    background-color: rgb(255, 92, 92);
+  }
+
+  .my-btn-blue{
+    background-color: blue;
+  }
+  .my-btn-blue:hover{
+    background-color: rgb(77, 77, 255);
+  }
+
+  /* Add these styles to your BookingTable.css file */
+.disabled-btn {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+
+.table{
+  background-color: gray;
+}
+
+.dropdown-menu.show{
+  max-height: 3rem;
+}

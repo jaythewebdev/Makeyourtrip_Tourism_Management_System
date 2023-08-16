@@ -1,0 +1,881 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Lobster+Two:ital@1&family=Marck+Script&family=Open+Sans:ital,wght@0,400;0,600;1,700&family=Playball&display=swap");
+/* ================ */
+/* css variables */
+
+:root {
+  --primary-font: "Open Sans", sans-serif;
+  --secondary-font: "Playball", "cursive";
+  --clr-primary: #0a437c;
+  --clr-primary-light: #2493e0;
+  --clr-secondary: #fe5c24;
+  --clr-grey-1: #041320;
+  --clr-grey-5: #617d98;
+  --clr-grey-10: #f1f5f8;
+  --clr-white: #fff;
+  --transition: all 0.2s linear;
+  --spacing: 0.2rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+/* end of css variables */
+
+/* =================================================================== */
+/* global styles */
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--clr-white);
+  color: var(--clr-grey-1);
+  font-family: var(--primary-font);
+  font-size: 0.875rem;
+  /* font size kammi la irunthu ponum as we use media queries */
+  line-height: 1.5;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+}
+img:not(.my-navbar-logo) {
+  width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  /* line height value smaller than body value */
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 0.875rem;
+  /* should be exactly same as body */
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+
+/* now media queries */
+
+@media screen and (min-width: 800px) {
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1rem;
+    /* should be exactly same as body */
+  }
+}
+.my-btn {
+  text-transform: uppercase;
+  background: var(--clr-secondary);
+  color: var(--clr-white);
+  padding: 0.375rem 0.75rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  /* font-weight: 700; */
+  transition: var(--transition);
+  font-size: 0.68rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+.btn:hover {
+  background: var(--clr-primary-light);
+}
+
+/* will add more */
+
+.general-section {
+  padding: 3rem 0;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1120px;
+}
+
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+
+}
+@media screen and (max-width: 768px) {
+    .destination-head {
+        margin-top: 0rem;
+       }
+  }
+
+
+.section-title {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+.section-title h2 {
+  text-transform: uppercase;
+}
+
+.section-title span {
+  color: var(--clr-secondary);
+}
+
+/* ================== */
+
+/* header */
+/* my-navbar */
+.my-navbar-logo{
+    font-style:var(--secondary-font) ;
+}
+.my-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--clr-white);
+  box-shadow: var(--dark-shadow);
+  width: 100%;
+  z-index: 200;
+}
+.my-navbar-center {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.my-navbar-social-icons {
+  /* display: none; */
+  margin-left: 4rem;
+  height: 2rem;
+}
+.my-navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 2rem;
+}
+.my-navbar-toggle {
+  background: transparent;
+  border: transparent;
+  color: var(--clr-secondary);
+  font-size: 1.7rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.my-navbar-toggle:hover {
+  transform: scale(1.2);
+}
+
+.my-navbar-links {
+  display: block;
+  color: var(--clr-grey-5);
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  padding: 1rem 2.25rem;
+  font-size: 1rem;
+  font-family: var(--primary-font);
+  font-weight: 600;
+  transition: var(--transition);
+}
+.my-navbar-links:hover {
+  background: var(--clr-primary-light);
+  padding-left: 2.45rem;
+  color: var(--clr-grey-1);
+}
+.my-navbar-links-icon{
+    text-transform: uppercase;
+    /* background: var(--clr-secondary); */
+    /* color: var(--clr-white); */
+    padding: 0.375rem 0.75rem;
+    letter-spacing: var(--spacing);
+    font-weight: 700;
+    transition: var(--transition);
+    font-size: 0.68rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+
+}
+
+/* 280px */
+/* for toggling pure js takes place */
+.my-navbar-list {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.show-list {
+  height:340px;
+}
+
+/* responsive */
+@media screen and (min-width: 992px) {
+  .my-profile-dropdown{
+    margin-right: 0;
+  }
+  .my-navbar {
+    padding: 0.8rem 2rem;
+  }
+  .my-navbar-toggle {
+    display: none;
+  }
+  .my-navbar-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* optional to be on the safer side */
+    flex-wrap: wrap;
+  }
+  .my-navbar-header {
+    /* padding: 0 0; */
+  }
+  /* to make list flex */
+
+  .my-navbar-list {
+    display: flex;
+    align-items: center;
+    height: auto;
+  }
+  .my-navbar-links {
+    padding: 0 0;
+    margin-right: 1.7rem;
+
+  }
+  .my-navbar-links:hover {
+    background: transparent;
+    padding-left: 0;
+    color: var(--clr-secondary);
+  }
+  .my-navbar-links-icon {
+    font-size: 1.6rem;
+    /* padding: 0.7rem; */
+    font:var(--primary-font);
+    transition: var(--transition);
+    color: var(--clr-primary-light);
+    /* margin-bottom: 20rem; */
+  }
+  .my-navbar-links-icon:hover {
+    color: var(--clr-secondary);
+  }
+}
+
+/* hero */
+.hero-container {
+    max-height:70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom:4rem; */
+  }
+
+  .content {
+    position: relative;
+  }
+  
+  /* ----- carousel content stylings ----- */
+  /* places the carousel content on center of the carousel */
+  .carousel-content {
+    position: absolute;
+    /*to center the content horizontally and vertically*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    text-align: center;
+    z-index: 2;
+    margin-top: 1.5rem;
+    /* margin-bottom: 3rem; */
+  }
+  
+  /*----- end of carousel content stylings ----- */
+  
+  /* ----- slideshow stylings ----- */
+  .slideshow {
+    height: 100%;
+    overflow: hidden; /* to hide slides in x-direction */
+    position: relative;    
+  }
+  /* wrapper which wraps all the slideshow images stylings */
+  .slideshow-wrapper {
+    display: flex;
+    /* We give it width as 400% because we are making a 
+       4 image carousel. If you want to make for example, 
+       5 images carousel, then give width as 500%. */
+    width: 500%;
+    height: 100%;
+    position: relative;
+    /* you can change the animation settings from below */
+    animation: slideshow 20s infinite;
+  }
+  .slideshow-wrapper::after {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.4));
+  }
+  /* define width and height for images*/
+  .slide {
+    width: 100%;
+    height: 100%;
+  }
+  .slide-img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover;  */
+    background: linear-gradient(rgb(44, 174, 186, 0.5), rgba(0, 0, 0, 0.7))
+    center/cover no-repeat;
+  }
+  
+  /* @keyframes are used to provide animations
+   We make these settings for 4 image carousel.
+   Make modification according to your needs. */
+  @keyframes slideshow {
+    0%  { left: 0; }
+    10% { left: 0; }
+    15% { left: -100%; }
+    25% { left: -100%; }
+    30% { left: -200%; }
+    40% { left: -200%; }
+    45% { left: -300%; }
+    55% { left: -300%; }
+    60% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -100%; }
+    85% { left: -100%; }
+    90% { left: 0%; }
+  }
+  /* ----- end of slideshow stylings ----- */
+  
+  /* ----- carousel control buttons stylings ----- */
+  .slide-btn {
+    background-color: #bbb;
+    border-radius: 50%;
+    border: .12rem solid var(--clr-primary-light);
+    width: 1.2rem;
+    height: 1.2rem;
+    outline: none;
+    cursor: pointer;
+    /* stylings for positioning the buttons at
+       the bottom of the carousel */
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    transform: translateX(-50%);
+    z-index: 50;
+    margin-top: 3rem;
+
+    /* margin-bottom: 3rem; */
+  }
+  /* As we provide position as absolute, 
+  the buttons places one over the other. 
+  So, we have to place them individually
+  at their correct positions. */
+  .slide-btn-1 {
+    top:35%;
+    /* left: 40%; */
+  }
+  .slide-btn-2 {
+    top:40%;
+    /* left: 45%; */
+  }
+  .slide-btn-3 {
+    top:45%;
+    /* left: 50%; */
+  }
+  .slide-btn-4 {
+    top: 50%;
+  }
+  .slide-btn-5 {
+    top: 55%;
+  }
+  .slide-btn-container{
+    display: flex;
+    flex-direction: column;
+  }
+  /* When we focus on the particular button, 
+  the animation stops to that particular image 
+  to which the button is associated. */
+  .slide-btn-1:focus~.slideshow-wrapper {
+    animation: none;
+    top: 0;
+  }
+  .slide-btn-2:focus~.slideshow-wrapper {
+    animation: none;
+    top: -100%;
+  }
+  .slide-btn-3:focus~.slideshow-wrapper {
+    animation: none;
+    left: -200%;
+  }
+  .slide-btn-4:focus~.slideshow-wrapper {
+    animation: none;
+    left: -300%;
+  }
+  .slide-btn-5:focus~.slideshow-wrapper {
+    animation: none;
+    left: -400%;
+  }
+  /* when we focus on the button, the background color changes */
+  .slide-btn:focus {
+    background-color:var(--clr-secondary);
+  }
+  /* ----- end of carousel control buttons stylings ----- */
+  .hero-banner {
+    text-align: center;
+    color: var(--clr-white);
+    letter-spacing: var(--spacing);
+    padding: 1rem 3rem;
+  }
+  .hero-banner h1 {
+    font-family: var(--secondary-font);
+    font-size: 5rem;
+    text-transform: capitalize;
+    /* padding-bottom: 0; */
+  }
+  .hero-banner p {
+    color: var(--clr-white);
+    font-weight: 300;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin l and r auto kudukalana nalla extent agirum atha control panna we give */
+    /* padding-bottom: 0.3rem; */
+    max-width: 28rem;
+  }
+  
+  .hero-btn {
+    background: var(--clr-primary-light);
+    font-size: 1.2rem;
+    padding: 0.9rem 1.6rem;
+    font-weight: 600;
+    color:#fff;
+  }
+  .hero-btn:hover {
+    /* background: var(--clr-secondary); */
+    background: transparent;
+    border:2px solid #ffff;
+  }
+  /* if you want a bg img for banner only after 536px */
+  /* @media screen and (min-width: 536px) {
+    .hero {
+      background: linear-gradient(rgb(44, 174, 186, 0.5), rgba(0, 0, 0, 0.7)),
+        url(../images/bg1.jpg) center/cover no-repeat;
+    }
+  } */
+  @media screen and (min-width: 1268px) {
+  .container{
+    margin-bottom:6rem;
+  }
+  }
+  @media screen and (max-width: 768px) {
+    .hero-banner {
+      margin: 0;
+      padding: 0;
+    }
+    .hero-banner h1 {
+      font-size: 2.3rem;
+      margin-bottom: 0;
+    }
+    .hero-banner p {
+      max-width: 39rem;
+    }
+    .hero-btn{
+      font-size: .62rem;
+      padding: 0.23rem 0.4rem;
+      font-weight: 600;
+    }
+    .slide-btn {
+      width: .72rem;
+      height: .72rem;
+      margin-top: 3rem;
+      /* margin-bottom: 3rem; */
+    }
+  }
+
+/* about */
+
+.about-img,
+.about-info {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 968px) {
+  .about-center {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .about-img,
+  .about-info {
+    margin-bottom: 0;
+    flex: 0 0 calc(50% - 2rem);
+    align-self: center;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .about-img {
+    position: relative;
+  }
+  .about-img::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 0.5rem solid var(--clr-secondary);
+    top: -1.5rem;
+    left: -1.5rem;
+    z-index: -1;
+  }
+}
+/* end about */
+
+/* services */
+
+.services {
+  background: var(--clr-grey-10);
+}
+
+.service {
+  margin-bottom: 3rem;
+  text-align: center;
+  transition: var(--transition);
+  padding: 1rem;
+}
+.service:hover {
+  box-shadow: 0px 3px 0px 0px var(--clr-secondary);
+}
+
+.service-icon {
+  /* background: var(--clr-primary-light); */
+  color: var(--clr-secondary);
+  font-size: 1.9rem;
+  padding: 0.5rem;
+  margin-bottom: 0.7rem;
+  display: inline-block;
+}
+.service-text {
+  max-width: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 576px) {
+  .services-center {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* background: yellowgreen; */
+  }
+  .service {
+    flex: 0 0 calc(50% - 1rem);
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .service {
+    flex: 0 0 calc(33.333% - 1rem);
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .service {
+    display: flex;
+    /* justify-content: space-between; */
+    /* flex-wrap: wrap; */
+    text-align: left;
+  }
+
+  .service-icon {
+    align-self: start;
+    padding-right: 1rem;
+  }
+  .service-title {
+    margin-bottom: 0.4rem;
+  }
+}
+/* end services */
+
+/* tours */
+
+.tour-card {
+  background: var(--clr-grey-10);
+  transition: var(--transition);
+  box-shadow: var(--light-shadow);
+  margin-bottom: 2.5rem;
+  border-radius: var(--radius);
+}
+.tour-card:hover {
+  box-shadow: var(--dark-shadow);
+  transform: scale(1.01);
+}
+
+.tour-img-container {
+  position: relative;
+}
+.tour-img-container p {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 0;
+  background: var(--clr-secondary);
+  color: var(--clr-grey-1);
+  padding: 0.2rem 0.4rem;
+  text-transform: capitalize;
+}
+.tours-img {
+  max-height: 18rem;
+  object-fit: cover;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+.tours-info {
+  padding: 1.3rem 1.37rem;
+}
+.tours-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  /* margin-top: -0.3rem; */
+  /* line-height: 0;
+  margin-bottom: 0; */
+}
+.tours-footer p {
+  color: var(--clr-secondary);
+  line-height: 0;
+  margin-bottom: 0;
+  /* paddding use panna nala we give 0 to above props  */
+  text-transform: capitalize;
+  /* font-weight: 500; */
+}
+
+.tour-btn {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 576px) {
+  .tours-center {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .tour-card {
+    flex: 0 0 calc(50% - 2rem);
+  }
+}
+
+@media screen and (min-width: 976px) {
+  .tour-card {
+    flex: 0 0 calc(33.33% - 2rem);
+  }
+}
+/* end tours */
+
+/* contact */
+.contact {
+  background: var(--clr-primary);
+  color: var(--clr-white);
+}
+.contact-text p {
+  color: var(--clr-grey-5);
+  font-weight: 600;
+}
+
+.contact-form {
+  display: flex;
+  max-width: 28rem;
+  margin-top: 2rem;
+}
+.form-mail-control {
+  flex: 1 1 auto;
+  color: var(--clr-grey-5);
+}
+.form-mail-control,
+.contact-btn {
+  background: var(--clr-white);
+  border: transparent;
+  font-size: 1rem;
+  padding: 0.375rem 0.75rem;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  font-family: var(--primary-font);
+}
+.form-mail-control::placeholder {
+  color: inherit;
+}
+.contact-btn {
+  background: var(--clr-secondary);
+  color: var(--clr-white);
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--primary-font);
+  /* padding-left: 0.7rem; */
+}
+.contact-btn:hover {
+  background: var(--clr-primary-light);
+}
+
+@media screen and (min-width: 992px) {
+  .contact-center {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* background-color: rgb(91, 121, 31); */
+  }
+  .contact-form {
+    flex: 1 1 auto;
+    align-self: flex-start;
+    max-width: 100%;
+    padding-left: 2rem;
+    margin-top: 0;
+  }
+}
+/* end contact */
+
+/* gallery */
+.gallery-img-container {
+  position: relative;
+  transition: var(--transition);
+  background-color: var(--clr-primary);
+}
+.gallery-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: var(--clr-white);
+  opacity: 0;
+  transition: var(--transition);
+}
+.gallery-img {
+  /* if the images are not cropped properly use this trick */
+  height: 17rem;
+  object-fit: cover;
+  transition: var(--transition);
+}
+.gallery-img-container:hover .gallery-img {
+  opacity: 0.7;
+  cursor: pointer;
+  /* z-index: 1; */
+}
+.gallery-img-container:hover .gallery-icon {
+  opacity: 1;
+}
+
+@media screen and (min-width: 736px) {
+  .gallery-center {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+  .gallery-img-container {
+    flex: 1 1 50%;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .gallery-img-container {
+    flex: 1 0 25%;
+  }
+}
+
+/* end gallery */
+
+/* footer */
+
+.footer {
+  background: var(--clr-grey-1);
+  text-align: center;
+  padding: 3rem;
+}
+footer div {
+  margin-bottom: 1.4rem;
+}
+.footer-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* display: block; */
+  margin-bottom: 1.4rem;
+}
+.footer-links {
+  color: var(--clr-white);
+  margin-right: 1.3rem;
+  /* font-weight: 600; */
+  letter-spacing: var(--spacing);
+  line-height: 1.7rem;
+  transition: var(--transition);
+}
+.footer-links:hover {
+  color: var(--clr-secondary);
+}
+.footer-links-icon {
+  color: var(--clr-white);
+  font-size: 1.8rem;
+  padding: 0.7rem;
+  transition: var(--transition);
+}
+.footer-links-icon:hover {
+  color: var(--clr-secondary);
+}
+
+.copyright p {
+  color: var(--clr-white);
+  letter-spacing: var(--spacing);
+  margin-bottom: 3rem;
+}
+/* end footer */
+
+
+.start-date-input::placeholder {
+    color: red;
+  }
+  
+  /* Replace 'blue' with your desired color value for the second placeholder */
+  .end-date-input::placeholder {
+    color: blue;
+  }

@@ -1,0 +1,8 @@
+.search-hero-container{
+    background: 
+    linear-gradient(rgb(44, 174, 186, 0.5), rgba(0, 0, 0, 0.6)),
+    url(https://img.traveltriangle.com/attachments/pictures/1069639/original/gorakhpur_tour_domestic.jpg?tr=w-1366,h-305) center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

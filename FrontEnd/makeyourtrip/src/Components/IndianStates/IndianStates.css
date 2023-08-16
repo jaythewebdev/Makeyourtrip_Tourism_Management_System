@@ -1,0 +1,78 @@
+
+  .states-container {
+    display: flex;
+    /* width:80%;
+    margin: auto; */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    -webkit-transition: all 700ms ease-in;
+  }
+  
+  .panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+  }
+  
+  .panel.active {
+    flex: 5;
+  }
+  
+  .panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+  }
+  
+
+.states-slider-header {
+    margin-top: 15rem;
+    margin-bottom: 55px;
+    width: 90vw;
+    margin-left:auto;
+    margin-right: auto;
+    max-width: 1120px;
+  }
+  @media screen and (max-width: 830px) {
+    .states-slider-header {
+          margin-top:0rem;
+        }
+      }
+  @media screen and (max-width: 600px) {
+.states-slider-header {
+      margin-bottom: 70px !important;
+    }
+  }
+.states-slider-header h1 {
+    font-weight: 800;
+    font-size: 3rem;
+    margin: 5px -5px 15px;
+  }
+  .states-slider-header span {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 14px;
+    color: #471aa0;
+  }
+  .states-slider-header p {
+    max-width: min(40ch, 100% - 2rem);
+    line-height: 1.6;
+    color: #565656;
+  }

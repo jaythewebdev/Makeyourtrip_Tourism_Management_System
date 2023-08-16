@@ -1,0 +1,16 @@
+.nav-link {
+    /* Styles for inactive buttons */
+    background-color: #f0f0f0; /* Set your desired background color */
+    color: #fe5c24; /* Set your desired text color */
+  }
+  .nav-link:hover {
+    /* Styles for inactive buttons */
+    background-color: #f0f0f0; /* Set your desired background color */
+    color: #fe5c24; /* Set your desired text color */
+  }
+
+  .nav-link.my-active {
+    /* Styles for active button */
+    background-color: #fe5c24; /* Set your desired active background color */
+    color: #fff; /* Set your desired active text color */
+  }

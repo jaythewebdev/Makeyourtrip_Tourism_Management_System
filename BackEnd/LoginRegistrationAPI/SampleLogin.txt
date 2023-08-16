@@ -1,0 +1,54 @@
+1)
+{
+  "user": {
+  },
+  "name": "Jayasurya",
+  "phoneNumber": "8610260435",
+  "emailId": "jai123@gmail.com",
+  "passwordClear": "jai123"
+}
+
+2)
+{
+  "user": {
+  },
+  "agencyName": "ABC LTD",
+  "contactPersonName": "Abhi",
+  "phoneNumber": "8791324655",
+  "emailId": "abhi123@gmail.com",
+  "street": "Nehru nagar",
+  "city": "Coimbatore",
+  "state": "TamilNadu",
+  "country": "India",
+  "passwordClear": "abhi123"
+}
+
+
+booking
+1)
+{
+  "tourId": 1,
+  "userId": 3,
+  "bookingDate": "2023-08-02T05:15:54.785Z",
+  "passengers": [
+    {
+      "name": "Jayasurya",
+      "age": "21",
+      "gender": "Male",
+    },
+{
+      "name": "Prem",
+      "age": "21",
+      "gender": "Male",
+}
+  ],
+  "payments": [
+    {
+      "paymentDay": "2023-08-02T05:15:54.785Z",
+      "paymentAmount": 1000,
+      "discountAmount": 0,
+      "walletAmount": 0,
+      "netPayableAmount": 1000,
+    }
+  ]
+}
